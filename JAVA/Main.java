@@ -2,45 +2,45 @@ import org.w3c.dom.ls.LSOutput;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 import java.util.Scanner;
+import java.util.Random;
 public class Main {
     public static void main(String[] args) {
-        /* DECLARACION DE VARIABLES
-        int x = 123;
-        double y = 3.14;
-        boolean z = true;
-        char symbol = '@';
-        String name = "Bro";
-
-        System.out.println("Hello "+name);
-        */
-
-        /* SWAP TWO VARIABLES
-        String x = "Water";
-        String y = "Kool-Aid";
-        String temp;
-
-        temp = x;
-        x = y;
-        y = temp;
-
-        System.out.println("x: "+x);
-        System.out.println("y: "+y);
-        */
+        // MATH OPERATIONS
+        double a;
+        double b;
+        double c;
 
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter side a: ");
+        a = scanner.nextDouble();
+        System.out.println("Enter side b: ");
+        b = scanner.nextDouble();
+        c = Math.sqrt((a*a)+(b*b));
+        System.out.println("The hipotenuse is: "+c);
+        scanner.close();
 
-        System.out.println("What is your name bitch? ");
-        String name = scanner.nextLine();
+        Random random = new Random();
+        int x = random.nextInt(6)+1; //+1 para evitar que aparezca el 0
+        double y = random.nextDouble();
+        boolean z = random.nextBoolean();
+        System.out.println("Random INT: "+x+"\nRandom DOUBLE: "+y+"\nRandom BOOLEAN: "+z);
+        /*
+        double x = 3.14;
+        double y = -10;
 
-        System.out.println("How old are you? ");
-        int age = scanner.nextInt();
-        scanner.nextLine();
+        double M = Math.max(x, y);
+        double m = Math.min(x, y);
+        double a = Math.abs(y);
+        double s = Math.sqrt(x);
+        double r = Math.round(x);
+        double c = Math.ceil(x);
+        double f = Math.floor(x);
 
-        System.out.println("What is your favorite food? ");
-        String food = scanner.nextLine();
+        System.out.println("We have two numbers: 3.14 y -10");
+        System.out.println("The MAX number is: "+M+"\nThe min number is: "+m+"\nThe absolute value of -10 is: "+a);
+        System.out.println("The squart of 3.14 is: "+s+"\nThe round of 3.14 is: "+r+"\nThe ceil of 3.14 is: "+c);
+        System.out.println("The floor od 3.14 is: "+f);
+        */
 
-        System.out.println("Hello "+name);
-        System.out.println("You are "+age+" years old");
-        System.out.println("You like "+food);
     }
 }
